@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+"""
+Spyder Editor
+
+This is a temporary script file.
+"""
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+data=pd.read_table("D:/inca/S03BB423.txt")
+
+#Set X，Y
+x_data=np.array(data['PI-01'][3:10])
+y_data=np.array(data['AI-01'][3:10])
+x_data=x_data.astype('float64')
+y_data=y_data.astype('float64')
+plt.plot(x_data, y_data,color='red',linestyle='solid')
+
